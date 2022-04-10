@@ -155,7 +155,7 @@ if employee == 'burak':
 
 
   st.markdown("## Sentiment Result")
-  st.markdown(f"<h1 style='text-align: center; color: yellow;'>{worker_emotion_dict['burak'].loc[0, 'sentiment'].title()}</h1>", unsafe_allow_html=True)
+  st.markdown(f"<h1 style='text-align: center; color: yellow;'>{worker_emotion_dict.loc[0, 'sentiment'].title()}</h1>", unsafe_allow_html=True)
   
 elif employee == 'taylan':
    pass
