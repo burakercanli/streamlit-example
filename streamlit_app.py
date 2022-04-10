@@ -146,7 +146,7 @@ if employee == 'burak':
 
   st.markdown("<hr/>",unsafe_allow_html=True)
   
-    kpi6, kpi7 = st.columns(2)
+  kpi6, kpi7 = st.columns(2)
   
   with kpi6:
       st.markdown("**Wellness Index**")
@@ -177,7 +177,7 @@ elif employee == 'taylan':
 
   st.markdown("<hr/>",unsafe_allow_html=True)
   
-    kpi6, kpi7 = st.columns(2)
+  kpi6, kpi7 = st.columns(2)
   
   with kpi6:
       st.markdown("**Wellness Index**")
