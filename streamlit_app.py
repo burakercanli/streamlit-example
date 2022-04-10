@@ -98,21 +98,27 @@ else:
   
 print(overall_sentiment)
 
-st.markdown("##Entire Factory")
+st.markdown("## Entire Factory")
 
-kpi1, kpi2, kpi3 = st.beta_columns(3)
+kpi1, kpi2 = st.beta_columns(2)
 
 with kpi1:
-  st.markdown("**Total Work Hours")
+  st.markdown("**Total Work Hours**")
   st.markdown(f"<h1 style='text-align: center; color: red;'>{total_work}</h1>", unsafe_allow_html=True)
   
 with kpi2:
     st.markdown("**Total Break Hours**")
     st.markdown(f"<h1 style='text-align: center; color: red;'>{total_break}</h1>", unsafe_allow_html=True)
 
-with kpi3:
-    st.markdown("**General Sentiment**")
-    st.markdown(f"<h1 style='text-align: center; color: red;'>{overall_sentiment}</h1>", unsafe_allow_html=True)
+st.markdown("<hr/>",unsafe_allow_html=True)
+
+st.markdown("## General Sentiment")
+
+kpi01, kpi02, kpi03, kpi04 = st.beta_columns(4)
+    
+#with kpi01:
+ #   st.markdown("**General Sentiment**")
+  #  st.markdown(f"<h1 style='text-align: center; color: red;'>{overall_sentiment}</h1>", unsafe_allow_html=True)
 
 
 #if page == 'burak':
