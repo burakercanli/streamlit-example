@@ -224,3 +224,4 @@ elif employee == 'berhan':
   st.markdown("**Recent Emotional State**")
   st.line_chart(df[df['name'] == 'berhan'][['positive', 'negative']])  
 
+st.title("Alert Monitoring")
