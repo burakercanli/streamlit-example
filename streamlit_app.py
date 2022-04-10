@@ -117,11 +117,11 @@ kpi1, kpi2 = st.columns(2)
 
 with kpi1:
   st.markdown("**Total Work Hours**")
-  st.markdown(f"<h1 style='text-align: center; color: red;'>{total_work}</h1>", unsafe_allow_html=True)
+  st.markdown(f"<h1 style='text-align: center; color: green;'>{total_work}</h1>", unsafe_allow_html=True)
   
 with kpi2:
     st.markdown("**Total Break Hours**")
-    st.markdown(f"<h1 style='text-align: center; color: red;'>{total_break}</h1>", unsafe_allow_html=True)
+    st.markdown(f"<h1 style='text-align: center; color: green;'>{total_break}</h1>", unsafe_allow_html=True)
 
 st.markdown("<hr/>",unsafe_allow_html=True)
 
