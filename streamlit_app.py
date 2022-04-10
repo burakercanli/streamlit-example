@@ -19,8 +19,6 @@ The dashboard can show you detailed information for entire factory or a specific
 df = pd.read_csv("hackathon.csv", parse_dates=["date"],sep="\t")
 df = df.sort_values("date")
 
-st.write(df.head())
-
 
 elist = df['name'].unique()
 employee = st.sidebar.selectbox("Select a employee:",elist)
