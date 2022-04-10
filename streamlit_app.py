@@ -237,6 +237,7 @@ elif employee == 'berhan':
   st.line_chart(df[df['name'] == 'berhan'][['positive', 'negative']])  
 
 st.title("Alert Monitoring")
+st.markdown("***Burak did not take a lunch break yet***")
 st.markdown(f"<h1 style='text-align: center; color: yellow;'>{'Burak did not take a lunch break yet'}</h1>", unsafe_allow_html=True)
 st.markdown(f"<h1 style='text-align: center; color: green;'>{'Productivity index of Berhan has risen by 4 points'}</h1>", unsafe_allow_html=True)
 st.markdown(f"<h1 style='text-align: center; color: red;'>{'Taylan has large emotional fluctuations. They are advised to talk with workplace doctor.'}</h1>", unsafe_allow_html=True)
