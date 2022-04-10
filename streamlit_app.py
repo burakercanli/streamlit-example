@@ -5,6 +5,10 @@ import pandas as pd
 import streamlit as st
 from typing import DefaultDict
 from pandas._libs.tslibs.timedeltas import Timedelta
+import plotly.express as px
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
+import matplotlib.pyplot as plt
 
 """
 # Welcome to Employee Management System!
@@ -112,9 +116,14 @@ with kpi2:
 
 st.markdown("<hr/>",unsafe_allow_html=True)
 
-st.markdown("## General Sentiment")
+st.title("General Sentiment")
+fig = px.pie(overall_sentiment, values=overall_sentiment.values()[:3], names=overall_sentiment.keys()[:3], title='Total Sentiment Cases')
+st.plotly_chart(fig)
 
-kpi01, kpi02, kpi03, kpi04 = st.columns(4)
+
+#st.markdown("## General Sentiment")
+
+#kpi01, kpi02, kpi03, kpi04 = st.columns(4)
     
 #with kpi01:
  #   st.markdown("**General Sentiment**")
