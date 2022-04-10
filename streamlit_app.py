@@ -18,6 +18,7 @@ The dashboard can show you detailed information for entire factory or a specific
 
 df = pd.read_csv("hackathon.csv", parse_dates=["date"],sep="\t")
 df = df.sort_values("date")
+df["neutral"] = 100 - (df.positive + df.negative)
 
 # Toplam Çalışma Süresi
 total_work = Timedelta(0)
