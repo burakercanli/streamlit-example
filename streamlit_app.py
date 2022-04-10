@@ -117,7 +117,7 @@ with kpi2:
 st.markdown("<hr/>",unsafe_allow_html=True)
 
 st.title("General Sentiment")
-fig = px.pie(overall_sentiment, values=overall_sentiment.values()[:3], names=overall_sentiment.keys()[:3], title='Total Sentiment Cases')
+fig = px.pie(overall_sentiment, values=list(overall_sentiment.values()[:3]), names=list(overall_sentiment.keys()[:3]), title='Total Sentiment Cases')
 st.plotly_chart(fig)
 
 
