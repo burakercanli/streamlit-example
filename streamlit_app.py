@@ -18,9 +18,18 @@ In the meantime, below is an example of what you can do with just a few lines of
 df = pd.read_csv("hackathon.csv", parse_dates=["date"],sep="\t")
 df = df.sort_values("date")
 
+st.write(df.head())
+
 
 elist = df['name'].unique()
 employee = st.sidebar.selectbox("Select a employee:",elist)
+
+if page == 'burak':
+  # Display burak
+elif page == 'taylan':
+  # Display taylan
+else :
+    #display berhan
 
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
