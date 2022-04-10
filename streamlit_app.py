@@ -128,10 +128,34 @@ st.markdown("## Sentiment Result")
 st.markdown(f"<h1 style='text-align: center; color: yellow;'>{overall_sentiment.loc[0, 'sentiment'].title()}</h1>", unsafe_allow_html=True)
 
 
-#if page == 'burak':
-  # Display burak
-#elif page == 'taylan':
-  # Display taylan
-#else :
-    #display berhan
+if page == 'burak':
+  st.markdown("## For burak employee")
+
+  kpi3, kpi4, kpi5, kpi6, kpi7 = st.columns(5)
+
+  with kpi3:
+    st.markdown("**Work Hours For burak**")
+    st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_time_dict.get('burak')}</h1>", unsafe_allow_html=True)
+
+  with kpi4:
+      st.markdown("**Break Hours For burak**")
+      st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('burak')}</h1>", unsafe_allow_html=True)
+      
+  with kpi5:
+      st.markdown("**Average Work Hours For burak**")
+      st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('burak')}</h1>", unsafe_allow_html=True)
+
+  st.markdown("<hr/>",unsafe_allow_html=True)
+
+  st.title("General Sentiment")
+  fig = px.pie(overall_sentiment, values=worker_emotion_dict.iloc[0, :3], names=worker_emotion_dict["burak"].columns[:3], title='Total Sentiment Cases')
+  st.plotly_chart(fig)
+
+
+  st.markdown("## Sentiment Result")
+  st.markdown(f"<h1 style='text-align: center; color: yellow;'>{worker_emotion_dict['burak'].loc[0, 'sentiment'].title()}</h1>", unsafe_allow_html=True)
+elif page == 'taylan':
+   Display taylan
+else :
+    display berhan
 
