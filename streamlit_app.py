@@ -239,4 +239,4 @@ elif employee == 'berhan':
 st.title("Alert Monitoring")
 st.markdown(f"<p1 style='text-align: center; color: yellow;'>{'Burak did not take a lunch break yet'}</p1>", unsafe_allow_html=True)
 st.markdown(f"<p1 style='text-align: center; color: green;'>{'Total productivity index has risen by 14 points'}</p1>", unsafe_allow_html=True)
-st.markdown(f"<p1 style='text-align: center; color: yellow;'>{'Taylan has large emotiomal fluctuations this week. It may be a good idea to visit workplace doctor.'}</p1>", unsafe_allow_html=True)
+st.markdown(f"<p1 style='text-align: center; color: yellow;'>{'Taylan has large emotional fluctuations this week. It may be a good idea to visit workplace doctor.'}</p1>", unsafe_allow_html=True)
