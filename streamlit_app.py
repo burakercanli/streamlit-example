@@ -147,8 +147,9 @@ if employee == 'burak':
 
   st.markdown("<hr/>",unsafe_allow_html=True)
 
+  worker_emotion_dict = pd.DataFrame(worker_emotion_dict).drop(['taylan', 'berhan'], axis=1)
   st.title("General Sentiment")
-  fig = px.pie(overall_sentiment, values=worker_emotion_dict.iloc[0, :3], names=worker_emotion_dict["burak"].columns[:3], title='Total Sentiment Cases')
+  fig = px.pie(overall_sentiment, values=worker_emotion_dict.iloc[:3, 0], names=worker_emotion_dict["burak"].index[:3], title='Total Sentiment Cases')
   st.plotly_chart(fig)
 
 
