@@ -226,17 +226,17 @@ elif employee == 'berhan':
   
   with kpi6:
       st.markdown("**Wellness Index**")
-      st.markdown(f"<p1 style='text-align: center; color: green;'>{well//10}</p1>", unsafe_allow_html=True)
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{well//10}</h1>", unsafe_allow_html=True)
       
   with kpi7:
       st.markdown("**Productivity Index**")
-      st.markdown(f"<p1 style='text-align: center; color: green;'>{prod//10}</p1>", unsafe_allow_html=True)
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{prod//10}</h1>", unsafe_allow_html=True)
   
   # Display berhan
   st.markdown("**Recent Emotional State**")
   st.line_chart(df[df['name'] == 'berhan'][['positive', 'negative']])  
 
 st.title("Alert Monitoring")
-st.markdown("***Burak did not take a lunch break yet***")
-st.markdown("***Total productivity index has risen by 14 points***")
-st.markdown("***Taylan has large emotiomal fluctuations this week. It may be a good idea to visit workplace doctor.***")
+st.markdown(f"<p1 style='text-align: center; color: yellow;'>{'Burak did not take a lunch break yet'}</p1>", unsafe_allow_html=True)
+st.markdown(f"<p1 style='text-align: center; color: green;'>{'Total productivity index has risen by 14 points'}</p1>", unsafe_allow_html=True)
+st.markdown(f"<p1 style='text-align: center; color: yellow;'>{'Taylan has large emotiomal fluctuations this week. It may be a good idea to visit workplace doctor.'}</p1>", unsafe_allow_html=True)
