@@ -145,7 +145,7 @@ if employee == 'burak':
       st.markdown(f"<h1 style='text-align: center; color: blue;'>{num_breaks_worker.get('burak')}</h1>", unsafe_allow_html=True)
 
   st.markdown("<hr/>",unsafe_allow_html=True)
-  
+  st.line_chart(df[df['name'] == 'burak']['positive'])
 elif employee == 'taylan':
   st.markdown("## Statistics for Taylan")
 
@@ -165,6 +165,7 @@ elif employee == 'taylan':
 
   st.markdown("<hr/>",unsafe_allow_html=True)
   # Display taylan
+  st.line_chart(df[df['name'] == 'taylan']['positive'])
 elif employee == 'berhan':
   st.markdown("## Statistics for Berhan")
 
@@ -184,5 +185,5 @@ elif employee == 'berhan':
 
   st.markdown("<hr/>",unsafe_allow_html=True)
   # Display berhan
-  
-st.line_chart(df[df['name'] == 'burak']['positive'])
+  st.line_chart(df[df['name'] == 'berhan']['positive'])  
+
