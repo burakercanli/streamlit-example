@@ -24,11 +24,11 @@ st.write(df.head())
 elist = df['name'].unique()
 employee = st.sidebar.selectbox("Select a employee:",elist)
 
-if page == 'burak':
+#if page == 'burak':
   # Display burak
-elif page == 'taylan':
+#elif page == 'taylan':
   # Display taylan
-else :
+#else :
     #display berhan
 
 with st.echo(code_location='below'):
