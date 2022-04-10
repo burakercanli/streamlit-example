@@ -15,6 +15,10 @@ forums](https://discuss.streamlit.io).
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
 
+df = pd.read_csv("hackathon.csv", parse_dates=["date"],sep="\t")
+df = df.sort_values("date")
+
+
 elist = df['name'].unique()
 employee = st.sidebar.selectbox("Select a employee:",elist)
 
