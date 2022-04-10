@@ -134,7 +134,7 @@ if employee == 'burak':
 
   with kpi3:
     st.markdown("**Total Work Hours**")
-    st.markdown(f"<h1 style='text-align: center; color: green;'>{worker_time_dict.get('burak')}</h1>", unsafe_allow_html=True)
+    st.markdown(f"<h1 style='text-align: center; color: yellow;'>{worker_time_dict.get('burak')}</h1>", unsafe_allow_html=True)
 
   with kpi4:
       st.markdown("**Total Break Hours**")
@@ -185,8 +185,19 @@ elif employee == 'berhan':
   with kpi5:
       st.markdown("**Total Number of Breaks**")
       st.markdown(f"<h1 style='text-align: center; color: green;'>{num_breaks_worker.get('berhan')}</h1>", unsafe_allow_html=True)
-
+  
   st.markdown("<hr/>",unsafe_allow_html=True)
+  
+  kpi6, kpi7 = st.columns(2)
+  
+  with kpi6:
+      st.markdown("**Wellness Index**")
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{'%82'}</h1>", unsafe_allow_html=True)
+      
+  with kpi7:
+      st.markdown("**Productivity Index**")
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{'%74'}</h1>", unsafe_allow_html=True)
+  
   # Display berhan
   st.markdown("**Recent Emotional State**")
   st.line_chart(df[df['name'] == 'berhan'][['positive', 'negative']])  
