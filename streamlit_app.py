@@ -128,26 +128,26 @@ elist = ['None'] + list(df['name'].unique())
 employee = st.selectbox("Select a employee:", elist)
 
 if employee == 'burak':
-  st.markdown("## For burak employee")
+  st.markdown("## Statistics for Burak")
 
   kpi3, kpi4, kpi5 = st.columns(3)
 
   with kpi3:
-    st.markdown("**Work Hours For burak**")
+    st.markdown("**Work Hours**")
     st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_time_dict.get('burak')}</h1>", unsafe_allow_html=True)
 
   with kpi4:
-      st.markdown("**Break Hours For burak**")
+      st.markdown("**Break Hours**")
       st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('burak')}</h1>", unsafe_allow_html=True)
       
   with kpi5:
-      st.markdown("**Average Work Hours For burak**")
-      st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('burak')}</h1>", unsafe_allow_html=True)
+      st.markdown("**Average Breaks**")
+      st.markdown(f"<h1 style='text-align: center; color: blue;'>{num_breaks_worker.get('burak')}</h1>", unsafe_allow_html=True)
 
   st.markdown("<hr/>",unsafe_allow_html=True)
   
 elif employee == 'taylan':
-  st.markdown("## For burak employee")
+  st.markdown("## Statistics for Taylan")
 
   kpi3, kpi4, kpi5 = st.columns(3)
 
@@ -160,13 +160,13 @@ elif employee == 'taylan':
       st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('taylan')}</h1>", unsafe_allow_html=True)
       
   with kpi5:
-      st.markdown("**Average Work Hours For taylan**")
-      st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('taylan')}</h1>", unsafe_allow_html=True)
+      st.markdown("**Average Breaks**")
+      st.markdown(f"<h1 style='text-align: center; color: blue;'>{num_breaks_worker.get('taylan')}</h1>", unsafe_allow_html=True)
 
   st.markdown("<hr/>",unsafe_allow_html=True)
   # Display taylan
 elif employee == 'berhan':
-  st.markdown("## For berhan employee")
+  st.markdown("## Statistics for Berhan")
 
   kpi3, kpi4, kpi5 = st.columns(3)
 
@@ -179,8 +179,8 @@ elif employee == 'berhan':
       st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('berhan')}</h1>", unsafe_allow_html=True)
       
   with kpi5:
-      st.markdown("**Average Work Hours For berhan**")
-      st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('berhan')}</h1>", unsafe_allow_html=True)
+      st.markdown("**Average Breaks**")
+      st.markdown(f"<h1 style='text-align: center; color: blue;'>{num_breaks_worker.get('berhan')}</h1>", unsafe_allow_html=True)
 
   st.markdown("<hr/>",unsafe_allow_html=True)
   # Display berhan
