@@ -124,14 +124,15 @@ fig = px.pie(overall_sentiment, values=overall_sentiment.iloc[0, :3], names=over
 st.plotly_chart(fig)
 
 
-#st.markdown("## General Sentiment")
+st.markdown("## Sentiment Result")
 
-#kpi01, kpi02, kpi03, kpi04 = st.columns(4)
+kpi01 = st.columns(1)
     
-#with kpi01:
- #   st.markdown("**General Sentiment**")
-  #  st.markdown(f"<h1 style='text-align: center; color: red;'>{overall_sentiment}</h1>", unsafe_allow_html=True)
+with kpi01:
+    st.markdown("**Sentiment Result**")
+    st.markdown(f"<h1 style='text-align: center; color: red;'>{overall_sentiment[0][3]}</h1>", unsafe_allow_html=True)
 
+st.markdown("<hr/>",unsafe_allow_html=True)
 
 #if page == 'burak':
   # Display burak
