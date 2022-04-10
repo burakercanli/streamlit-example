@@ -19,10 +19,6 @@ The dashboard can show you detailed information for entire factory or a specific
 df = pd.read_csv("hackathon.csv", parse_dates=["date"],sep="\t")
 df = df.sort_values("date")
 
-
-elist = df['name'].unique()
-employee = st.sidebar.selectbox("Select a employee:",elist)
-
 # Toplam Çalışma Süresi
 total_work = Timedelta(0)
 worker_dict = {}
@@ -128,6 +124,9 @@ st.markdown("## Sentiment Result")
 st.markdown(f"<h1 style='text-align: center; color: yellow;'>{overall_sentiment.loc[0, 'sentiment'].title()}</h1>", unsafe_allow_html=True)
 
 
+elist = ['None'] + df['name'].unique()
+employee = st.sidebar.selectbox("Select a employee:", elist)
+
 if employee == 'burak':
   st.markdown("## For burak employee")
 
@@ -166,7 +165,7 @@ elif employee == 'taylan':
 
   st.markdown("<hr/>",unsafe_allow_html=True)
   # Display taylan
-else:
+elif employee == 'berhan:
   st.markdown("## For berhan employee")
 
   kpi3, kpi4, kpi5 = st.columns(3)
@@ -185,4 +184,3 @@ else:
 
   st.markdown("<hr/>",unsafe_allow_html=True)
   # Display berhan
-
