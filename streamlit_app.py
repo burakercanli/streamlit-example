@@ -125,7 +125,7 @@ st.markdown(f"<h1 style='text-align: center; color: yellow;'>{overall_sentiment.
 
 
 elist = ['None'] + list(df['name'].unique())
-employee = st.sidebar.selectbox("Select a employee:", elist)
+employee = st.selectbox("Select a employee:", elist)
 
 if employee == 'burak':
   st.markdown("## For burak employee")
