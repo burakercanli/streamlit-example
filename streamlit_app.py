@@ -16,6 +16,15 @@ import matplotlib.pyplot as plt
 The dashboard can show you detailed information for entire factory or a specific employee.
 """
 
+def calculate_wellness_productivity(name):
+  prod = (worker_emotion_dict[name]['positive'] * worker_time_dict[name] * 0.06 - worker_emotion_dict[name]['negative'] * worker_break_dict[name]).__str__().split()[0]
+  prod = int(prod)
+
+  well = (worker_emotion_dict[name]['positive'] * worker_break_dict[name] - worker_emotion_dict[name]['negative'] * worker_time_dict[name] * 0.06).__str__().split()[0]
+  well = int(well)
+
+  return prod, well
+
 df = pd.read_csv("hackathon.csv", parse_dates=["date"],sep="\t")
 df = df.sort_values("date")
 df["neutral"] = 100 - (df.positive + df.negative)
@@ -149,13 +158,15 @@ if employee == 'burak':
   
   kpi6, kpi7 = st.columns(2)
   
+  well, prod = calculate_wellness_productivity('burak')
+  
   with kpi6:
       st.markdown("**Wellness Index**")
-      st.markdown(f"<h1 style='text-align: center; color: yellow;'>{'%52'}</h1>", unsafe_allow_html=True)
+      st.markdown(f"<h1 style='text-align: center; color: yellow;'>{well}</h1>", unsafe_allow_html=True)
       
   with kpi7:
       st.markdown("**Productivity Index**")
-      st.markdown(f"<h1 style='text-align: center; color: green;'>{'%91'}</h1>", unsafe_allow_html=True)
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{prod}</h1>", unsafe_allow_html=True)
   
   st.markdown("**Recent Emotional State**")
   st.line_chart(df[df['name'] == 'burak'][['positive', 'negative']])
@@ -179,14 +190,14 @@ elif employee == 'taylan':
   st.markdown("<hr/>",unsafe_allow_html=True)
   
   kpi6, kpi7 = st.columns(2)
-  
+  well, prod = calculate_wellness_productivity('taylan')
   with kpi6:
       st.markdown("**Wellness Index**")
-      st.markdown(f"<h1 style='text-align: center; color: green;'>{'%76'}</h1>", unsafe_allow_html=True)
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{well}</h1>", unsafe_allow_html=True)
       
   with kpi7:
       st.markdown("**Productivity Index**")
-      st.markdown(f"<h1 style='text-align: center; color: yellow;'>{'%63'}</h1>", unsafe_allow_html=True)
+      st.markdown(f"<h1 style='text-align: center; color: yellow;'>{prod}</h1>", unsafe_allow_html=True)
       
   # Display taylan
   st.markdown("**Recent Emotional State**")
@@ -211,14 +222,15 @@ elif employee == 'berhan':
   st.markdown("<hr/>",unsafe_allow_html=True)
   
   kpi6, kpi7 = st.columns(2)
+  well, prod = calculate_wellness_productivity('berhan')
   
   with kpi6:
       st.markdown("**Wellness Index**")
-      st.markdown(f"<h1 style='text-align: center; color: green;'>{'%82'}</h1>", unsafe_allow_html=True)
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{well}</h1>", unsafe_allow_html=True)
       
   with kpi7:
       st.markdown("**Productivity Index**")
-      st.markdown(f"<h1 style='text-align: center; color: green;'>{'%74'}</h1>", unsafe_allow_html=True)
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{prod}</h1>", unsafe_allow_html=True)
   
   # Display berhan
   st.markdown("**Recent Emotional State**")
