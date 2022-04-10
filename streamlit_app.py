@@ -128,7 +128,7 @@ st.markdown("## Sentiment Result")
 st.markdown(f"<h1 style='text-align: center; color: yellow;'>{overall_sentiment.loc[0, 'sentiment'].title()}</h1>", unsafe_allow_html=True)
 
 
-if page == 'burak':
+if employee == 'burak':
   st.markdown("## For burak employee")
 
   kpi3, kpi4, kpi5 = st.columns(3)
@@ -154,7 +154,7 @@ if page == 'burak':
 
   st.markdown("## Sentiment Result")
   st.markdown(f"<h1 style='text-align: center; color: yellow;'>{worker_emotion_dict['burak'].loc[0, 'sentiment'].title()}</h1>", unsafe_allow_html=True)
-elif page == 'taylan':
+elif employee == 'taylan':
    pass
    # Display taylan
 else:
