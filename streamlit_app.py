@@ -125,12 +125,9 @@ st.plotly_chart(fig)
 
 
 st.markdown("## Sentiment Result")
-
-kpi3 = st.columns(1)
-    
-with kpi3:
-    st.markdown("**Sentiment Result**")
-    st.markdown(f"<h1 style='text-align: center; color: yellow;'>{overall_sentiment.iloc[0, 'sentiment']}</h1>", unsafe_allow_html=True)
+  
+st.markdown("**Sentiment Result**")
+st.markdown(f"<h1 style='text-align: center; color: yellow;'>{overall_sentiment.iloc[0, 'sentiment']}</h1>", unsafe_allow_html=True)
 
 
 #if page == 'burak':
