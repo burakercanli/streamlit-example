@@ -124,7 +124,7 @@ st.markdown("## Sentiment Result")
 st.markdown(f"<h1 style='text-align: center; color: yellow;'>{overall_sentiment.loc[0, 'sentiment'].title()}</h1>", unsafe_allow_html=True)
 
 
-elist = ['None'] + df['name'].unique()
+elist = ['None'] + list(df['name'].unique())
 employee = st.sidebar.selectbox("Select a employee:", elist)
 
 if employee == 'burak':
