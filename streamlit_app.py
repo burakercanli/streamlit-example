@@ -146,21 +146,43 @@ if employee == 'burak':
       st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('burak')}</h1>", unsafe_allow_html=True)
 
   st.markdown("<hr/>",unsafe_allow_html=True)
-
-  
-  worker_emotion_dict = pd.DataFrame(worker_emotion_dict).drop(['taylan', 'berhan'], axis=1).T
-  st.title("General Sentiment")
-  fig = px.pie(worker_emotion_dict, values=worker_emotion_dict.iloc[:3, 0], names=worker_emotion_dict.columns[:3], title='Total Sentiment Cases')
-  st.plotly_chart(fig)
-
-
-  st.markdown("## Sentiment Result")
-  st.markdown(f"<h1 style='text-align: center; color: yellow;'>{worker_emotion_dict.loc[0, 'sentiment'].title()}</h1>", unsafe_allow_html=True)
   
 elif employee == 'taylan':
-   pass
+   st.markdown("## For burak employee")
+
+  kpi3, kpi4, kpi5 = st.columns(3)
+
+  with kpi3:
+    st.markdown("**Work Hours For taylan**")
+    st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_time_dict.get('taylan')}</h1>", unsafe_allow_html=True)
+
+  with kpi4:
+      st.markdown("**Break Hours For taylan**")
+      st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('taylan')}</h1>", unsafe_allow_html=True)
+      
+  with kpi5:
+      st.markdown("**Average Work Hours For taylan**")
+      st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('taylan')}</h1>", unsafe_allow_html=True)
+
+  st.markdown("<hr/>",unsafe_allow_html=True)
    # Display taylan
 else:
-  pass
+  st.markdown("## For berhan employee")
+
+  kpi3, kpi4, kpi5 = st.columns(3)
+
+  with kpi3:
+    st.markdown("**Work Hours For berhan**")
+    st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_time_dict.get('berhan')}</h1>", unsafe_allow_html=True)
+
+  with kpi4:
+      st.markdown("**Break Hours For berhan**")
+      st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('berhan')}</h1>", unsafe_allow_html=True)
+      
+  with kpi5:
+      st.markdown("**Average Work Hours For berhan**")
+      st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('berhan')}</h1>", unsafe_allow_html=True)
+
+  st.markdown("<hr/>",unsafe_allow_html=True)
   # Display berhan
 
