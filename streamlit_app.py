@@ -146,6 +146,16 @@ if employee == 'burak':
 
   st.markdown("<hr/>",unsafe_allow_html=True)
   
+    kpi6, kpi7 = st.columns(2)
+  
+  with kpi6:
+      st.markdown("**Wellness Index**")
+      st.markdown(f"<h1 style='text-align: center; color: yellow;'>{'%52'}</h1>", unsafe_allow_html=True)
+      
+  with kpi7:
+      st.markdown("**Productivity Index**")
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{'%91'}</h1>", unsafe_allow_html=True)
+  
   st.markdown("**Recent Emotional State**")
   st.line_chart(df[df['name'] == 'burak'][['positive', 'negative']])
 elif employee == 'taylan':
@@ -166,6 +176,17 @@ elif employee == 'taylan':
       st.markdown(f"<h1 style='text-align: center; color: green;'>{num_breaks_worker.get('taylan')}</h1>", unsafe_allow_html=True)
 
   st.markdown("<hr/>",unsafe_allow_html=True)
+  
+    kpi6, kpi7 = st.columns(2)
+  
+  with kpi6:
+      st.markdown("**Wellness Index**")
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{'%76'}</h1>", unsafe_allow_html=True)
+      
+  with kpi7:
+      st.markdown("**Productivity Index**")
+      st.markdown(f"<h1 style='text-align: center; color: yellow;'>{'%63'}</h1>", unsafe_allow_html=True)
+      
   # Display taylan
   st.markdown("**Recent Emotional State**")
   st.line_chart(df[df['name'] == 'taylan'][['positive', 'negative']])
