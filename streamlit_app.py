@@ -133,20 +133,20 @@ if employee == 'burak':
   kpi3, kpi4, kpi5 = st.columns(3)
 
   with kpi3:
-    st.markdown("**Work Hours**")
-    st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_time_dict.get('burak')}</h1>", unsafe_allow_html=True)
+    st.markdown("**Total Work Hours**")
+    st.markdown(f"<h1 style='text-align: center; color: green;'>{worker_time_dict.get('burak')}</h1>", unsafe_allow_html=True)
 
   with kpi4:
-      st.markdown("**Break Hours**")
-      st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('burak')}</h1>", unsafe_allow_html=True)
+      st.markdown("**Total Break Hours**")
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{worker_break_dict.get('burak')}</h1>", unsafe_allow_html=True)
       
   with kpi5:
-      st.markdown("**Average Breaks**")
-      st.markdown(f"<h1 style='text-align: center; color: blue;'>{num_breaks_worker.get('burak')}</h1>", unsafe_allow_html=True)
+      st.markdown("**Total Number of Breaks**")
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{num_breaks_worker.get('burak')}</h1>", unsafe_allow_html=True)
 
   st.markdown("<hr/>",unsafe_allow_html=True)
   
-  st.markdown("**Recent Employee Happiness**")
+  st.markdown("**Recent Emotional State**")
   st.line_chart(df[df['name'] == 'burak'][['positive', 'negative']])
 elif employee == 'taylan':
   st.markdown("## Statistics for Taylan")
@@ -154,40 +154,40 @@ elif employee == 'taylan':
   kpi3, kpi4, kpi5 = st.columns(3)
 
   with kpi3:
-    st.markdown("**Work Hours For taylan**")
-    st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_time_dict.get('taylan')}</h1>", unsafe_allow_html=True)
+    st.markdown("**Total Work Hours**")
+    st.markdown(f"<h1 style='text-align: center; color: green;'>{worker_time_dict.get('taylan')}</h1>", unsafe_allow_html=True)
 
   with kpi4:
-      st.markdown("**Break Hours For taylan**")
-      st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('taylan')}</h1>", unsafe_allow_html=True)
+      st.markdown("**Total Break Hours**")
+      st.markdown(f"<h1 style='text-align: center; color: yellow;'>{worker_break_dict.get('taylan')}</h1>", unsafe_allow_html=True)
       
   with kpi5:
-      st.markdown("**Average Breaks**")
-      st.markdown(f"<h1 style='text-align: center; color: blue;'>{num_breaks_worker.get('taylan')}</h1>", unsafe_allow_html=True)
+      st.markdown("**Total Number of Breaks**")
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{num_breaks_worker.get('taylan')}</h1>", unsafe_allow_html=True)
 
   st.markdown("<hr/>",unsafe_allow_html=True)
   # Display taylan
-  st.markdown("**Recent Employee Happiness**")
-  st.line_chart(df[df['name'] == 'taylan']['positive'])
+  st.markdown("**Recent Emotional State**")
+  st.line_chart(df[df['name'] == 'taylan'][['positive', 'negative']])
 elif employee == 'berhan':
   st.markdown("## Statistics for Berhan")
 
   kpi3, kpi4, kpi5 = st.columns(3)
 
   with kpi3:
-    st.markdown("**Work Hours For berhan**")
-    st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_time_dict.get('berhan')}</h1>", unsafe_allow_html=True)
+    st.markdown("**Total Work Hours**")
+    st.markdown(f"<h1 style='text-align: center; color: green;'>{worker_time_dict.get('berhan')}</h1>", unsafe_allow_html=True)
 
   with kpi4:
-      st.markdown("**Break Hours For berhan**")
-      st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('berhan')}</h1>", unsafe_allow_html=True)
+      st.markdown("**Total Break Hours**")
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{worker_break_dict.get('berhan')}</h1>", unsafe_allow_html=True)
       
   with kpi5:
-      st.markdown("**Average Breaks**")
-      st.markdown(f"<h1 style='text-align: center; color: blue;'>{num_breaks_worker.get('berhan')}</h1>", unsafe_allow_html=True)
+      st.markdown("**Total Number of Breaks**")
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{num_breaks_worker.get('berhan')}</h1>", unsafe_allow_html=True)
 
   st.markdown("<hr/>",unsafe_allow_html=True)
   # Display berhan
-  st.markdown("**Recent Employee Happiness**")
-  st.line_chart(df[df['name'] == 'berhan']['positive'])  
+  st.markdown("**Recent Emotional State**")
+  st.line_chart(df[df['name'] == 'berhan'][['positive', 'negative']])  
 
