@@ -105,6 +105,7 @@ else:
   overall_sentiment["sentiment"] = ["neutral"]
   
 print(overall_sentiment)
+overall_sentiment = pd.DataFrame.from_dict(overall_sentiment)
 
 st.markdown("## Entire Factory")
 
