@@ -184,3 +184,5 @@ elif employee == 'berhan':
 
   st.markdown("<hr/>",unsafe_allow_html=True)
   # Display berhan
+  
+st.linechart(df[df['name' == 'burak']]['positive'])
