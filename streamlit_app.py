@@ -148,7 +148,7 @@ if employee == 'burak':
   st.markdown("<hr/>",unsafe_allow_html=True)
   
 elif employee == 'taylan':
-   st.markdown("## For burak employee")
+  st.markdown("## For burak employee")
 
   kpi3, kpi4, kpi5 = st.columns(3)
 
@@ -165,7 +165,7 @@ elif employee == 'taylan':
       st.markdown(f"<h1 style='text-align: center; color: blue;'>{worker_break_dict.get('taylan')}</h1>", unsafe_allow_html=True)
 
   st.markdown("<hr/>",unsafe_allow_html=True)
-   # Display taylan
+  # Display taylan
 else:
   st.markdown("## For berhan employee")
 
