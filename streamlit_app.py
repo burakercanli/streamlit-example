@@ -162,11 +162,11 @@ if employee == 'burak':
   
   with kpi6:
       st.markdown("**Wellness Index**")
-      st.markdown(f"<h1 style='text-align: center; color: yellow;'>{well}</h1>", unsafe_allow_html=True)
+      st.markdown(f"<h1 style='text-align: center; color: yellow;'>{well//10}</h1>", unsafe_allow_html=True)
       
   with kpi7:
       st.markdown("**Productivity Index**")
-      st.markdown(f"<h1 style='text-align: center; color: green;'>{prod}</h1>", unsafe_allow_html=True)
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{prod//10}</h1>", unsafe_allow_html=True)
   
   st.markdown("**Recent Emotional State**")
   st.line_chart(df[df['name'] == 'burak'][['positive', 'negative']])
@@ -193,11 +193,11 @@ elif employee == 'taylan':
   well, prod = calculate_wellness_productivity('taylan')
   with kpi6:
       st.markdown("**Wellness Index**")
-      st.markdown(f"<h1 style='text-align: center; color: green;'>{well}</h1>", unsafe_allow_html=True)
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{well//10}</h1>", unsafe_allow_html=True)
       
   with kpi7:
       st.markdown("**Productivity Index**")
-      st.markdown(f"<h1 style='text-align: center; color: yellow;'>{prod}</h1>", unsafe_allow_html=True)
+      st.markdown(f"<h1 style='text-align: center; color: yellow;'>{prod//10}</h1>", unsafe_allow_html=True)
       
   # Display taylan
   st.markdown("**Recent Emotional State**")
@@ -226,11 +226,11 @@ elif employee == 'berhan':
   
   with kpi6:
       st.markdown("**Wellness Index**")
-      st.markdown(f"<h1 style='text-align: center; color: green;'>{well}</h1>", unsafe_allow_html=True)
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{well//10}</h1>", unsafe_allow_html=True)
       
   with kpi7:
       st.markdown("**Productivity Index**")
-      st.markdown(f"<h1 style='text-align: center; color: green;'>{prod}</h1>", unsafe_allow_html=True)
+      st.markdown(f"<h1 style='text-align: center; color: green;'>{prod//10}</h1>", unsafe_allow_html=True)
   
   # Display berhan
   st.markdown("**Recent Emotional State**")
