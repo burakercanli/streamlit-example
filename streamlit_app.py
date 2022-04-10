@@ -165,7 +165,7 @@ elif employee == 'taylan':
 
   st.markdown("<hr/>",unsafe_allow_html=True)
   # Display taylan
-elif employee == 'berhan:
+elif employee == 'berhan':
   st.markdown("## For berhan employee")
 
   kpi3, kpi4, kpi5 = st.columns(3)
