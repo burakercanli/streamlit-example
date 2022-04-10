@@ -92,13 +92,17 @@ for worker in worker_emotion_dict:
   overall_sentiment["negative"] = overall_sentiment.get("negative", 0) + worker_emotion_dict[worker]["negative"]
   overall_sentiment["neutral"] = overall_sentiment.get("neutral", 0) + worker_emotion_dict[worker]["neutral"]
 
+overall_sentiment["positive"] = [overall_sentiment.get("positive", 0)]
+overall_sentiment["negative"] = [overall_sentiment.get("negative", 0)]
+overall_sentiment["neutral"] = [overall_sentiment.get("neutral", 0)]
+
 max_val = max(overall_sentiment["positive"], overall_sentiment["negative"], overall_sentiment["neutral"])
 if max_val == overall_sentiment["positive"]:
-  overall_sentiment["sentiment"] = "positive"
+  overall_sentiment["sentiment"] = ["positive"]
 elif max_val == overall_sentiment["negative"]:
-  overall_sentiment["sentiment"] = "negative"
+  overall_sentiment["sentiment"] = ["negative"]
 else:
-  overall_sentiment["sentiment"] = "neutral"
+  overall_sentiment["sentiment"] = ["neutral"]
   
 print(overall_sentiment)
 
@@ -117,7 +121,7 @@ with kpi2:
 st.markdown("<hr/>",unsafe_allow_html=True)
 
 st.title("General Sentiment")
-fig = px.pie(overall_sentiment, values=list(overall_sentiment.values())[:3], names=list(overall_sentiment.keys())[:3], title='Total Sentiment Cases')
+fig = px.pie(overall_sentiment, values=overall_sentiment.iloc[0, :3], names=overall_sentiment.columns[:3], title='Total Sentiment Cases')
 st.plotly_chart(fig)
 
 
