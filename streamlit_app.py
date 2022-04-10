@@ -100,7 +100,7 @@ print(overall_sentiment)
 
 st.markdown("## Entire Factory")
 
-kpi1, kpi2 = st.beta_columns(2)
+kpi1, kpi2 = st.columns(2)
 
 with kpi1:
   st.markdown("**Total Work Hours**")
@@ -114,7 +114,7 @@ st.markdown("<hr/>",unsafe_allow_html=True)
 
 st.markdown("## General Sentiment")
 
-kpi01, kpi02, kpi03, kpi04 = st.beta_columns(4)
+kpi01, kpi02, kpi03, kpi04 = st.columns(4)
     
 #with kpi01:
  #   st.markdown("**General Sentiment**")
