@@ -166,7 +166,7 @@ if employee == 'burak':
       
   with kpi7:
       st.markdown("**Productivity Index**")
-      st.markdown(f"<h1 style='text-align: center; color: green;'>{prod//10}</h1>", unsafe_allow_html=True)
+      st.markdown(f"<h1 style='text-align: center; color: yellow;'>{prod//10}</h1>", unsafe_allow_html=True)
   
   st.markdown("**Recent Emotional State**")
   st.line_chart(df[df['name'] == 'burak'][['positive', 'negative']])
