@@ -130,7 +130,7 @@ kpi01 = st.columns(1)
     
 with kpi01:
     st.markdown("**Sentiment Result**")
-    st.markdown(f"<h1 style='text-align: center; color: red;'>{overall_sentiment.iloc[0, "sentiment"]}</h1>", unsafe_allow_html=True)
+    st.markdown(f"<h1 style='text-align: center; color: red;'>{overall_sentiment.iloc[0, 'sentiment']}</h1>", unsafe_allow_html=True)
 
 st.markdown("<hr/>",unsafe_allow_html=True)
 
